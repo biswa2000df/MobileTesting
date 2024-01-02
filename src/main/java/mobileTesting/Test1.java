@@ -23,6 +23,15 @@ public class Test1 {
 
 	public static void main(String[] args) throws MalformedURLException, InterruptedException, AWTException {
 		// TODO Auto-generated method stub
+		
+		/* To write to the appium folder
+		 * {
+			  "platformName": "Android",
+			  "platformVersion": "11",
+			  "deviceName": "d4a4d1d2",
+			  "appPackage": "com.microsoft.bing",
+			  "appActivity": "com.microsoft.sapphire.app.main.SapphireMainActivity"
+			}*/
 
 		DesiredCapabilities dc = new DesiredCapabilities();
 
@@ -40,7 +49,7 @@ public class Test1 {
 
 		dc.setCapability("appActivity", "com.microsoft.sapphire.app.main.SapphireMainActivity");
 
-		URL url = new URL("http://192.168.0.105:4723/wd/hub"); //192.168.0.105  											//192.168.15.70 office
+		URL url = new URL("http://localhost:4723/wd/hub"); //192.168.0.105  											//192.168.15.70 office
 
 		AndroidDriver<WebElement> driver = new AndroidDriver<WebElement>(url, dc);
 		

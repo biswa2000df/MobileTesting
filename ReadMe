@@ -1,0 +1,15 @@
+first required the appium application document
+ {
+  "platformName": "Android",
+  "platformVersion": "11",
+  "deviceName": "d4a4d1d2",
+  "appPackage": "com.microsoft.bing",
+  "appActivity": "com.microsoft.sapphire.app.main.SapphireMainActivity"
+}
+
+ANDROID_HOME = C:\Users\biswa\AppData\Local\Android\Sdk
+
+JAVA_HOME = C:\Program Files\Java\jdk-17.0.3.1
+
+
+if the appium in not working try this because it is install a applicatiion to ur mobile device
