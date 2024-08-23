@@ -2,9 +2,9 @@ package mobileTesting;
 
 import java.awt.AWTException;
 import java.awt.Robot;
+import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.List;
 import java.util.UUID;
 
 import org.openqa.selenium.By;
@@ -17,6 +17,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
 
 public class Test1 {
@@ -45,19 +46,34 @@ public class Test1 {
 
 //		dc.setCapability(MobileCapabilityType.APP, "C:\\Users\\biswa\\Documents\\Bing.apk");
 
-		dc.setCapability("appPackage", "com.microsoft.bing");
-
+		/*if u want to run the application to the direct then use the this appPackage and appActivity otherwise to go to the chrome browser to set the apth and do all the things  */
+		dc.setCapability("appPackage", "com.microsoft.bing"); 
 		dc.setCapability("appActivity", "com.microsoft.sapphire.app.main.SapphireMainActivity");
+		
+		
+		// Capabilities for Chrome browser
+		/*
+		 * dc.setCapability(MobileCapabilityType.BROWSER_NAME, "Chrome");
+		 */dc.setCapability("chromedriverExecutable", System.getProperty("user.dir") + File.separator + "BrowserDriver" + File.separator + "chromedriver.exe");
 
 		URL url = new URL("http://localhost:4723/wd/hub"); //192.168.0.105  											//192.168.15.70 office
 
-		AndroidDriver<WebElement> driver = new AndroidDriver<WebElement>(url, dc);
-		
+		// Use AndroidDriver instead of WebElement for mobile browser automation
+        AndroidDriver<AndroidElement> driver = new AndroidDriver<AndroidElement>(url, dc);
+		/*
+		 * // AndroidDriver<WebElement> driver = new AndroidDriver<WebElement>(url, dc);
+		 * that also u can write
+		 * System.out.println("Normal check to the chrome driver before hit url");
+		 * 
+		 * // driver.get("https://www.microsoft.com/en-us/bing");
+		 * driver.get("https://portal.zinghr.com/2015/pages/authentication/login.aspx");
+		 */	
 		Actions actions = new Actions(driver);
 		 JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
 	       
-       
-
+			/*
+			 * System.out.println("Normal check to the chrome driver after hit url");
+			 */
 		Thread.sleep(8000);
 		try {
 
