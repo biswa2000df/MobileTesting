@@ -17,6 +17,7 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.touch.WaitOptions;
+import io.appium.java_client.touch.offset.ElementOption;
 import io.appium.java_client.touch.offset.PointOption;
 
 public class demo {
@@ -411,7 +412,7 @@ public class demo {
 		
 		//***************************AssetDetails****************************************
 		
-		WebElement Applicant_Sanction_Tab = explicityWait(wait, "(//android.widget.Button[@index='1'])[4]");
+	/*	WebElement Applicant_Sanction_Tab = explicityWait(wait, "(//android.widget.Button[@index='1'])[4]");
 		Applicant_Sanction_Tab.click();
 		
 		WebElement KYC_Details_SanctionTab= explicityWait(wait, "(//android.view.View[@content-desc=\"KYC Details\"])[1]");
@@ -454,11 +455,19 @@ public class demo {
 		Select_AssetUsage_SanctionTab.click();
 		
 		Thread.sleep(1000);
-		ScrollDown(driver);
+//		ScrollDown(driver);
+		Co_Ordinate_Scroll(driver, 460, 760, 460, 1757);//scrollup
+		
+		Thread.sleep(1000);
+		Asset_Details_SanctionTab.click();//close the Asset Details Tab
+		
+		*/
 		
 		
 		
 		//***************************LoanInfo****************************************
+	
+	/*	
 		
 		WebElement ClickOn_LoanInfo_SanctionTab= explicityWait(wait, "(//android.view.View[@content-desc=\"Loan Info\"])[1]");
 		ClickOn_LoanInfo_SanctionTab.click();
@@ -478,21 +487,26 @@ public class demo {
 		driver.navigate().back();
 		
 		Thread.sleep(1000);
-		ScrollDown_LittleBit(driver);
+//		ScrollDown_LittleBit(driver);  
+		Co_Ordinate_Scroll(driver, 460, 760, 460, 1757);//scrollup
+		Thread.sleep(1000);
+		ClickOn_LoanInfo_SanctionTab.click();
 		
-		
+		*/
 		
 		//***************************Personal $ Contact Details****************************************
+
+	/*	
 		
 		WebElement Personal$ContactDetails_SanctionTab= explicityWait(wait, "(//android.view.View[@content-desc=\"Personal & Contact Details\"])[1]");
 		Personal$ContactDetails_SanctionTab.click();
 		
-		Thread.sleep(3000);
-		SelectOneElementInsideListOfElement(driver, "//*[@class=\"android.view.View\"]", "Personal Details", "Personal Details");
-		
-		ScrollDown_LittleBit(driver);
-		ScrollDown_LittleBit(driver);
 		Thread.sleep(2000);
+		SelectOneElementInsideListOfElement(driver, "//*[@class=\"android.view.View\"]", "Personal Details", "Personal Details");
+		Thread.sleep(2000);
+		
+		ScrollDown(driver);
+		Thread.sleep(1000);
 		
 		WebElement DOB_CLickOn_CalenderIcon_SanctionTab= explicityWait(wait, "//android.widget.Button[@content-desc=\"calendar\"] ");
 		DOB_CLickOn_CalenderIcon_SanctionTab.click();
@@ -509,7 +523,8 @@ public class demo {
 		OK_Btn_SanctionTab.click();
 		
 		Thread.sleep(2000);
-		ScrollDown(driver);
+		Co_Ordinate_Scroll(driver, 460, 1757, 460, 900);//scrolldown
+//		ScrollDown(driver);
 		
 		WebElement MaritalStatus_SanctionTab= explicityWait(wait, "//android.view.View[@content-desc=\"Marital Status\"]/android.view.View/android.view.View");
 		MaritalStatus_SanctionTab.click();
@@ -522,7 +537,6 @@ public class demo {
 		
 		SelectOneElementInsideListOfElement(driver, "//*[@class=\"android.widget.ScrollView\"]/android.view.View", "2", "No_of_Dependents_SanctionTab");
 		
-		Thread.sleep(2000);
 		ScrollDown_LittleBit(driver);
 		Thread.sleep(2000);
 		
@@ -539,27 +553,20 @@ public class demo {
 		
 		SelectOneElementInsideListOfElement(driver, "//*[@class=\"android.widget.ScrollView\"]/android.view.View", "1", "Vehicles_Owned_SanctionTab");
 		
-		Thread.sleep(2000);
 		ScrollDown_LittleBit(driver);
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		
 		WebElement Education_qualification_SanctionTab= explicityWait(wait, "//android.view.View[@content-desc=\"Education Qualification\"]/android.view.View/android.view.View");
 		Education_qualification_SanctionTab.click();
 		
 		SelectOneElementInsideListOfElement(driver, "//*[@class=\"android.widget.ScrollView\"]/android.view.View", "Post Graduate", "Education_qualification_SanctionTab");
 
-		
 		Thread.sleep(2000);
-		ScrollDown(driver);
-		Thread.sleep(2000); 
-		
-		WebElement Basic_Customer_Profile_SanctionTab= explicityWait(wait, "(//android.view.View[@content-desc=\"Basic Customer Profile\"])[1]");
-		Basic_Customer_Profile_SanctionTab.click();
-		Basic_Customer_Profile_SanctionTab.click();
-		
-		WebElement Personal$ContactDetails_again_SanctionTab= explicityWait(wait, "(//android.view.View[@content-desc=\"Personal & Contact Details\"])[1]");
-		Personal$ContactDetails_again_SanctionTab.click();
-		Personal$ContactDetails_again_SanctionTab.click(); 
+		Co_Ordinate_Scroll(driver, 460, 760, 460, 1757);//scrollup
+		Co_Ordinate_Scroll(driver, 460, 760, 460, 1757);//scrollup
+//		Thread.sleep(2000);
+//		ScrollDown(driver);
+//		Thread.sleep(2000); 
 		
 		SelectOneElementInsideListOfElement(driver, "//*[@class=\"android.view.View\"]", "Address Details", "Address Details");
 		
@@ -581,7 +588,7 @@ public class demo {
 		driver.navigate().back();
 		
 		ScrollDown_LittleBit(driver);
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		
 		WebElement Enter_PinCode_SanctionTab= explicityWait(wait, "//android.view.View[@content-desc=\"Pincode\"]/android.widget.EditText");
 		Enter_PinCode_SanctionTab.click();
@@ -595,28 +602,38 @@ public class demo {
 		Select_Taluk_SanctionTab.click();
 		
 		SelectOneElementInsideListOfElement(driver, "//*[@class=\"android.view.View\"] ", "Mahanga", "Taluk");
+		Thread.sleep(1000);
 		
-		ScrollDown(driver);
-		Thread.sleep(3000);
+		Co_Ordinate_Scroll(driver, 460, 760, 460, 1757);//scrollup
+		Personal$ContactDetails_SanctionTab.click();
+		
+//		ScrollDown(driver);
+//		Thread.sleep(3000);
 		
 		
-		
+		*/
 		
 		
 		
 		
 		//***************************Basic Customer Profile****************************************
-		
+
+		/*
+		 
+		WebElement Basic_Customer_Profile_SanctionTab= explicityWait(wait, "(//android.view.View[@content-desc=\"Basic Customer Profile\"])[1]");
 		Basic_Customer_Profile_SanctionTab.click();
 		
-		ScrollDown(driver);
-		Thread.sleep(3000);
+//		ScrollDown(driver);
+		Thread.sleep(2000);
+		Co_Ordinate_Scroll(driver, 460, 1757, 460, 900);//scrolldown
 		
 		WebElement Total_Employment_SanctionTab= explicityWait(wait, "//android.view.View[@content-desc=\"Total Employment\"]/android.view.View/android.widget.EditText");
 		Total_Employment_SanctionTab.click();
 		Total_Employment_SanctionTab.clear();
 		Total_Employment_SanctionTab.sendKeys("5");
 		driver.hideKeyboard();
+		
+		ScrollDown_LittleBit(driver);
 		
 		WebElement Annual_Gross_Income_SanctionTab= explicityWait(wait, "(//android.view.View[@content-desc=\"Declared Annual Gross Income\"])[2]/android.view.View/android.widget.EditText");
 		Annual_Gross_Income_SanctionTab.click();
@@ -632,43 +649,439 @@ public class demo {
 		Annual_Gross_Obligations_SanctionTab.sendKeys("500000");
 		driver.hideKeyboard();
 		
+		ScrollDown_LittleBit(driver);
+		
 		WebElement Name_Of_Orgination_SanctionTab= explicityWait(wait, "//android.view.View[@content-desc=\"Name of Organization\"]/android.view.View/android.widget.EditText");
 		Name_Of_Orgination_SanctionTab.click();
 		Name_Of_Orgination_SanctionTab.clear();
 		Name_Of_Orgination_SanctionTab.sendKeys("Mahindra Finance");
 		driver.hideKeyboard();
 		
-		ScrollDown_LittleBit(driver);
+		WebElement Years_in_current_profession_SanctionTab= explicityWait(wait, "//android.view.View[@content-desc=\"Years in current profession\"]/android.view.View/android.widget.EditText");
+		Years_in_current_profession_SanctionTab.click();
+		Years_in_current_profession_SanctionTab.clear();
+		Years_in_current_profession_SanctionTab.sendKeys("5");
+		driver.hideKeyboard();
+		
+		*/
+		
+
+		//***************************Payout Details****************************************			
+		
+		/*
+		ScrollDown(driver);
+		
+		WebElement PayOut_Details_SanctionTab= explicityWait(wait, "(//android.view.View[@content-desc=\"Payout Details\"])[1]");
+		PayOut_Details_SanctionTab.click();
 		Thread.sleep(3000);
+		PayOut_Details_SanctionTab.click();
+		
+		WebElement ProceedBtn_SanctionTab= explicityWait(wait, "//android.widget.Button[@content-desc=\"Proceed\"]");
+		ProceedBtn_SanctionTab.click();  */
+		
+		
+		
+		
+		
+	//	*****************************************CoApplicant******************************************************************
+		
+		WebElement kebabMenu= explicityWait(wait, "//android.widget.Button[@content-desc=\"kebabMenu\"]");
+		kebabMenu.click();	
+		
+		WebElement Select_Add_CoApplicant_Button= explicityWait(wait, "//android.widget.Button[@content-desc=\"Add Co-Applicant\"]");
+		Select_Add_CoApplicant_Button.click();
+		
+	/*	WebElement ClickOn_Add_New_CoApplicant_Plus_Button= explicityWait(wait, "//android.view.View[@content-desc=\"Add new Co - applicant\"]");
+		ClickOn_Add_New_CoApplicant_Plus_Button.click();
+		
+		WebElement FirstName_CoApplicant= explicityWait(wait, "//android.view.View[@content-desc=\"First Name\"]/android.view.View/android.widget.EditText");
+		FirstName_CoApplicant.click();
+		FirstName_CoApplicant.sendKeys("NAMRATA");
+		driver.navigate().back();
+		
+		WebElement MiddleName_CoApplicant= explicityWait(wait, "//android.view.View[@content-desc=\"Middle Name\"]/android.view.View/android.widget.EditText");
+		MiddleName_CoApplicant.click();
+		MiddleName_CoApplicant.sendKeys("ARUN");
+		driver.navigate().back();
+		    
+		WebElement LastName_CoApplicant= explicityWait(wait, "//android.view.View[@content-desc=\"Last Name\"]/android.view.View/android.widget.EditText");
+		LastName_CoApplicant.click();
+		LastName_CoApplicant.sendKeys("SHETE");
+		driver.navigate().back();
+		 
+		WebElement MobileNumber_CoApplicant= explicityWait(wait, "//android.view.View[@content-desc=\"Mobile Number\"]/android.view.View/android.widget.EditText");
+	    MobileNumber_CoApplicant.click();
+	    MobileNumber_CoApplicant.sendKeys("7744008734");
+		driver.navigate().back();
+		  
+		WebElement GenderMaping_CoApplicant= explicityWait(wait, "//android.view.View[@content-desc=\"Gender\"]/android.view.View");
+		GenderMaping_CoApplicant.click();
+		
+		SelectOneElementInsideListOfElement(driver, "//*[@class=\"android.widget.ScrollView\"]/android.view.View", "Female", "GenderMaping_CoApplicant");
+     
+		WebElement AddToFinancialIncome_CoApplicant= explicityWait(wait, "//android.view.View[@content-desc=\"Yes\"]/android.widget.RadioButton");
+		AddToFinancialIncome_CoApplicant.click();
+		
+		WebElement SaveBtn_CoApplicant= explicityWait(wait, "//android.widget.Button[@content-desc=\"Save\"]");
+		SaveBtn_CoApplicant.click();  
+		
+		*/
+		    
+		WebElement ClickOn_One_CoApplicant= explicityWait(wait, "//android.widget.Button[contains(@content-desc,'NAMRATA ARUN SHETE')]");
+		ClickOn_One_CoApplicant.click(); 
+		
+		//==========================================================CONSENT for Co-Applicant====================================================//
+		
+/*
+		
+		WebElement CoApplicant_Consent_Tab = explicityWait(wait, "(//android.widget.Button[@index='1'])[2]");
+		CoApplicant_Consent_Tab.click();
+		
+		
+		WebElement CoApplicant_ConsentPrimaryDetails = explicityWait(wait, "//android.view.View[@content-desc=\"Primary Details\"]");
+		CoApplicant_ConsentPrimaryDetails.click();
+		
+		WebElement CoApplicant_ModeOfConsent = explicityWait(wait, "(//android.view.View[@content-desc=\"Mode Of Consent\"])[1]");
+		CoApplicant_ModeOfConsent.click();
+		
+		
+		WebElement CoApplicant_ModeOfConsent_Select_Form = explicityWait(wait, "//android.view.View[@content-desc=\"Form\"]/android.widget.RadioButton");
+		CoApplicant_ModeOfConsent_Select_Form.click();
+		
+		Thread.sleep(2000);
+		
+		ScrollDown(driver);//ScrollDown
+		
+		WebElement clickOn_CaptureImageIcon_CoApplicant= explicityWait(wait, "//android.widget.Button[@content-desc=\"Capture Image\"]");
+		clickOn_CaptureImageIcon_CoApplicant.click();
+		
+		WebElement clickOn_AddImage_Page_CoApplicant= explicityWait(wait, "//android.view.View[@content-desc=\"Add Image\"]");
+		clickOn_AddImage_Page_CoApplicant.click();
+		
+		
+		WebElement SaveDocumentButtonConsent_CoApplicant= explicityWait(wait, "//android.widget.Button[@content-desc=\"Save Document\"]");
+		SaveDocumentButtonConsent_CoApplicant.click();
+		
+		
+		WebElement SaveAndUploadButtonConsent_CoApplicant= explicityWait(wait, "//android.widget.Button[@content-desc=\"Save and Upload\"]");
+		SaveAndUploadButtonConsent_CoApplicant.click();
+		
+		WebElement consent_Proceed_Button_CoApplicant= explicityWait(wait, "//android.widget.Button[@content-desc=\"Proceed\"]");
+		consent_Proceed_Button_CoApplicant.click();
+		
+		WebElement consent_Provided_Successfully_CoApplicant= explicityWait(wait, "//android.widget.Button[@content-desc=\"Proceed\"]");
+		consent_Provided_Successfully_CoApplicant.click();
+		
+		System.out.println("Applicant Consent completed"); 
+		
+		Thread.sleep(10000);
+		
+//		//==========================================================KYC for Co-Applicant====================================================//
+		
+		
+		//CLick on KYC tab
+				
+//		WebElement Applicant_KYC_Tab = explicityWait(wait, "(//android.widget.Button[@index='1'])[3]");  click on KYC Tab
+//		Applicant_KYC_Tab.click();
+		
+		WebElement clickOn_CaptureImageIconKYC_PAN= explicityWait(wait, "//android.widget.Button[@content-desc=\"Capture Image\"]");
+		clickOn_CaptureImageIconKYC_PAN.click();
+		
+		WebElement clickOn_Gallery_Image= explicityWait(wait, "//android.widget.Button[@index=\"3\"]");
+		clickOn_Gallery_Image.click();
+		
+		WebElement clickOn_Gallery_Button= explicityWait(wait, "//android.widget.Button[@content-desc=\"Gallery\"]");
+		clickOn_Gallery_Button.click();
+		
+		Thread.sleep(2000);
+		co_ordinatesClick(driver, 870, 157);// click on search button
+		
+		WebElement clickOn_SearchBar= explicityWait(wait, "//android.widget.EditText[contains(@text,'Search')]");
+		clickOn_SearchBar.click();
+		clickOn_SearchBar.sendKeys("NAMRATA_PAN");
+		
+	
+		WebElement selectPanImage= explicityWait(wait, "//android.widget.LinearLayout[contains(@content-desc,'NAMRATA_PAN.jpg')]");
+		selectPanImage.click();
+		
+		WebElement SaveDocumentButtonKYC_PAN= explicityWait(wait, "//android.widget.Button[@content-desc=\"Save Document\"]");
+		SaveDocumentButtonKYC_PAN.click();
+			
+		WebElement SaveAndUploadButtonKYC_PAN= explicityWait(wait, "//android.widget.Button[@content-desc=\"Save and Upload\"]");
+		SaveAndUploadButtonKYC_PAN.click();
+		
+		WebElement PAN_VerifyBtn= explicityWait(wait, "//android.widget.Button[@content-desc=\"Verify\"]");
+		PAN_VerifyBtn.click();
+		
+		WebElement KYC_PAN_Verify_Proceed_Button= explicityWait(wait, "//android.widget.Button[@content-desc=\"Proceed\"]");
+		KYC_PAN_Verify_Proceed_Button.click();
+		
+		Thread.sleep(2000);
+		ScrollDown(driver);
+		
+		WebElement OSV_PAN_CheckBox= explicityWait(wait, "(//android.view.View[@content-desc=\"Original seen and verified\"])[1]/android.widget.CheckBox");
+		OSV_PAN_CheckBox.click();
+		
+		
+		
+		//Primary applicant KYC tab POI
+		
+		WebElement POI_tab= explicityWait(wait, "(//android.view.View[@content-desc=\"Proof Of Identity\"])[1]");
+		POI_tab.click();
+		
+		WebElement TypeOfIdentityFor_PrimaryOn_KYC_Tab= explicityWait(wait, "//android.view.View[@content-desc=\"Aadhaar Card(Preferred)\"]");
+		TypeOfIdentityFor_PrimaryOn_KYC_Tab.click();
+		
+		List<WebElement> options = driver.findElements(By.xpath("//*[@class='android.widget.ScrollView']/android.view.View"));
+		System.out.println("Number of options: " + options.size());
+		Thread.sleep(2000);
+
+		for (WebElement option : options) {
+		    try {
+		        // Retrieve the content description (content-desc attribute)
+		        String optionText = option.getAttribute("content-desc");
+		        
+		        System.out.println("Dropdown Value = " + optionText);
+		        
+		        // Compare and click if it matches the desired text
+		        if (optionText.contains("Aadhaar Card")) {
+		            option.click();
+		            break;
+		        }
+		    } catch (Exception e) {
+		        System.out.println("Error retrieving content-desc for option: " + e.getMessage());
+		    }
+		}
+		
+		WebElement clickOn_CaptureImageIconKYC_POI= explicityWait(wait, "//android.widget.Button[@content-desc=\"Capture Image\"]");
+		clickOn_CaptureImageIconKYC_PAN.click();
+		
+		WebElement clickOn_Gallery_Image_POI= explicityWait(wait, "//android.widget.Button[@index=\"3\"]");
+		clickOn_Gallery_Image.click();
+		
+		WebElement clickOn_Gallery_Button_POI= explicityWait(wait, "//android.widget.Button[@content-desc=\"Gallery\"]");
+		clickOn_Gallery_Button.click();
+		
+		Thread.sleep(2000);
+		co_ordinatesClick(driver, 870, 157);// click on search button
+		
+		WebElement clickOn_SearchBar_POI= explicityWait(wait, "//android.widget.EditText[contains(@text,'Search')]");
+		clickOn_SearchBar.click();
+		clickOn_SearchBar.sendKeys("NAMRATA_AADHAAR");
+		
+	
+		WebElement selectPOIImage= explicityWait(wait, "//android.widget.LinearLayout[contains(@content-desc,'NAMRATA_AADHAAR.jpg')]");
+		selectPOIImage.click();
+		
+		WebElement SaveDocumentButtonKYC_POI= explicityWait(wait, "//android.widget.Button[@content-desc=\"Save Document\"]");
+		SaveDocumentButtonKYC_PAN.click();
+		
+		
+		WebElement SaveAndUploadButtonKYC_POI= explicityWait(wait, "//android.widget.Button[@content-desc=\"Save and Upload\"]");
+		SaveAndUploadButtonKYC_PAN.click();
+		
+		ScrollDown(driver);
+		
+		try {
+		WebElement OSV_POI_CheckBox= explicityWait(wait, "(//android.view.View[@content-desc=\"Original seen and verified\"])[1]/android.widget.CheckBox");
+		OSV_PAN_CheckBox.click();
+		}catch(Exception e) {
+			ScrollDown(driver);
+			WebElement OSV_POI_CheckBox= explicityWait(wait, "(//android.view.View[@content-desc=\"Original seen and verified\"])[1]/android.widget.CheckBox");
+			OSV_PAN_CheckBox.click();
+		}
+		
+		
+		//Primary Applicant POA
+		
+		WebElement POA_tab= explicityWait(wait, "(//android.view.View[@content-desc=\"Proof Of Address\"])[1]");
+		POA_tab.click();
+		Thread.sleep(2000);
+		POA_tab.click();
+		
+		WebElement KYC_Proceed_Button= explicityWait(wait, "//android.widget.Button[@content-desc=\"Proceed\"]");
+		KYC_Proceed_Button.click();
+		
+		*/
+		
+		//**************************************************Customer Profile for Co-Applicant****************************************************************
+	
+		
+		WebElement CoApplicant_CustomerProfile = explicityWait(wait, "(//android.widget.Button[@index='1'])[4]");
+		CoApplicant_CustomerProfile.click();
+		
+		Thread.sleep(2000);
+		SelectOneElementInsideListOfElement(driver, "//*[@class=\"android.view.View\"]", "Personal Details", "Personal Details");
+		
+		Thread.sleep(2000);
+		WebElement CoApplicant_CustomerProfile_ClickOn_TitleField = explicityWait(wait, "//android.view.View[@content-desc=\"Title / Salutation\"]/android.view.View/android.view.View");
+		CoApplicant_CustomerProfile_ClickOn_TitleField.click();
+		
+		WebElement CoApplicant_CustomerProfile_Select_Title = explicityWait(wait, "//android.view.View[@content-desc=\"Miss\"]");
+		CoApplicant_CustomerProfile_Select_Title.click();
+		Thread.sleep(2000);
+		
+		Co_Ordinate_Scroll(driver, 400, 1700, 423, 1017);//scrolldown
+		Co_Ordinate_Scroll(driver, 400, 1700, 423, 1017);//scrolldown
+//		ScrollDown(driver);
+		
+		WebElement MaritalStatus_SanctionTab= explicityWait(wait, "//android.view.View[@content-desc=\"Marital Status\"]/android.view.View/android.view.View");
+		MaritalStatus_SanctionTab.click();
+		
+		SelectOneElementInsideListOfElement(driver, "//*[@class=\"android.widget.ScrollView\"]/android.view.View", "Unmarried", "MaritalStatus_SanctionTab");
+
+		
+		WebElement No_of_Dependents_SanctionTab= explicityWait(wait, "//android.view.View[@content-desc=\"No. of Dependents\"]/android.view.View/android.view.View");
+		No_of_Dependents_SanctionTab.click();
+		
+		SelectOneElementInsideListOfElement(driver, "//*[@class=\"android.widget.ScrollView\"]/android.view.View", "2", "No_of_Dependents_SanctionTab");
+		
+		ScrollDown_LittleBit(driver);
+		Thread.sleep(2000);
+		
+		WebElement No_of_Earning_Members_SanctionTab= explicityWait(wait, "//android.view.View[@content-desc=\"No. of Earning Members\"]/android.view.View//android.view.View");
+		No_of_Earning_Members_SanctionTab.click();
+			
+		SelectOneElementInsideListOfElement(driver, "//*[@class=\"android.widget.ScrollView\"]/android.view.View", "3", "No_of_Earning_Members_SanctionTab");
+		
+		ScrollDown_LittleBit(driver);
+		Thread.sleep(2000);
+		
+		WebElement Vehicles_Owned_SanctionTab= explicityWait(wait, "//android.view.View[@content-desc=\"Vehicles Owned\"]/android.view.View/android.view.View");
+		Vehicles_Owned_SanctionTab.click();
+		
+		SelectOneElementInsideListOfElement(driver, "//*[@class=\"android.widget.ScrollView\"]/android.view.View", "1", "Vehicles_Owned_SanctionTab");
+		
+		ScrollDown_LittleBit(driver);
+		Thread.sleep(1000);
+		
+		WebElement Education_qualification_SanctionTab= explicityWait(wait, "//android.view.View[@content-desc=\"Education Qualification\"]/android.view.View/android.view.View");
+		Education_qualification_SanctionTab.click();
+		
+		SelectOneElementInsideListOfElement(driver, "//*[@class=\"android.widget.ScrollView\"]/android.view.View", "Post Graduate", "Education_qualification_SanctionTab");
+
+		Thread.sleep(1000);
+		ScrollDown(driver);
+		Thread.sleep(2000); 
+		
+		//select sister
+		
+		WebElement Click_RelationShip_With_Customers_CoApplicant_CustomerProfile= explicityWait(wait, "//android.view.View[@content-desc=\"Relationship with Customer\"]/android.view.View/android.view.View");
+		Click_RelationShip_With_Customers_CoApplicant_CustomerProfile.click();
+		
+		Thread.sleep(2000);
+		driver.findElementByAndroidUIAutomator(
+			    "new UiScrollable(new UiSelector().scrollable(true)).setAsVerticalList().scrollForward()"
+			    + ".scrollIntoView(new UiSelector().description(\"Sister\"));"
+			);
+		
+		
+		
+		Co_Ordinate_Scroll(driver, 460, 760, 460, 1757);//scrollup
+		Co_Ordinate_Scroll(driver, 460, 760, 460, 1757);//scrollup
+		
+		SelectOneElementInsideListOfElement(driver, "//*[@class=\"android.view.View\"]", "Address Details", "Address Details");
+		
+		ScrollDown_LittleBit(driver);
+		
+		WebElement Address_Line1_SanctionTab= explicityWait(wait, "//android.view.View[@content-desc=\"Address Line 1\"]/android.view.View/android.widget.EditText");
+		Address_Line1_SanctionTab.click();
+		Address_Line1_SanctionTab.clear();
+		Address_Line1_SanctionTab.sendKeys("Odisha");
+		driver.navigate().back();
+		
+		ScrollDown_LittleBit(driver);
+		Thread.sleep(2000);
+		
+		WebElement Address_Line2_SanctionTab= explicityWait(wait, "//android.view.View[@content-desc=\"Address Line 2\"]/android.view.View/android.widget.EditText");
+		Address_Line2_SanctionTab.click();
+		Address_Line2_SanctionTab.clear();
+		Address_Line2_SanctionTab.sendKeys("Odisha");
+		driver.navigate().back();
+		
+		ScrollDown_LittleBit(driver);
+		Thread.sleep(1000);
+		
+		WebElement Enter_PinCode_SanctionTab= explicityWait(wait, "//android.view.View[@content-desc=\"Pincode\"]/android.widget.EditText");
+		Enter_PinCode_SanctionTab.click();
+		Enter_PinCode_SanctionTab.clear();
+		Enter_PinCode_SanctionTab.sendKeys("754204");
+		
+		WebElement Select_PinCode_SanctionTab= explicityWait(wait, "//android.view.View[@content-desc=\"754204\"]");
+		Select_PinCode_SanctionTab.click();
+		
+		WebElement Select_Taluk_SanctionTab= explicityWait(wait, "//android.view.View[@content-desc=\"Taluk\"]/android.view.View/android.view.View");
+		Select_Taluk_SanctionTab.click();
+		
+		SelectOneElementInsideListOfElement(driver, "//*[@class=\"android.view.View\"] ", "Mahanga", "Taluk");
+		Thread.sleep(1000);
+		
+		Co_Ordinate_Scroll(driver, 460, 760, 460, 1757);//scrollup
+		
+		WebElement Personal$ContactDetails_CustomerProfile_Co_Applicant= explicityWait(wait, "(//android.view.View[@content-desc=\"Personal & Contact Details\"])[1]");
+		Personal$ContactDetails_CustomerProfile_Co_Applicant.click();
+		
+		
+		
+		
+		
+		
+		//*********************************************Basic Customer Profile for Co-Applicant******************************************************************
+		
+		WebElement Basic_Customer_Profile_SanctionTab= explicityWait(wait, "(//android.view.View[@content-desc=\"Basic Customer Profile\"])[1]");
+		Basic_Customer_Profile_SanctionTab.click();
+		
+//		ScrollDown(driver);
+		Thread.sleep(2000);
+		Co_Ordinate_Scroll(driver, 460, 1757, 460, 900);//scrolldown
+		
+		WebElement Total_Employment_SanctionTab= explicityWait(wait, "//android.view.View[@content-desc=\"Total Employment\"]/android.view.View/android.widget.EditText");
+		Total_Employment_SanctionTab.click();
+		Total_Employment_SanctionTab.clear();
+		Total_Employment_SanctionTab.sendKeys("5");
+		driver.hideKeyboard();
+		
+		ScrollDown_LittleBit(driver);
+		
+		WebElement Annual_Gross_Income_SanctionTab= explicityWait(wait, "(//android.view.View[@content-desc=\"Declared Annual Gross Income\"])[2]/android.view.View/android.widget.EditText");
+		Annual_Gross_Income_SanctionTab.click();
+		Annual_Gross_Income_SanctionTab.clear();
+		Annual_Gross_Income_SanctionTab.sendKeys("500000");
+		driver.hideKeyboard();
+		
+		ScrollDown_LittleBit(driver);
+		
+		WebElement Annual_Gross_Obligations_SanctionTab= explicityWait(wait, "(//android.view.View[@content-desc=\"Declared Annual Gross Obligations\"])[2]/android.view.View/android.widget.EditText");
+		Annual_Gross_Obligations_SanctionTab.click();
+		Annual_Gross_Obligations_SanctionTab.clear();
+		Annual_Gross_Obligations_SanctionTab.sendKeys("500000");
+		driver.hideKeyboard();
+		
+		ScrollDown_LittleBit(driver);
+		
+		WebElement Name_Of_Orgination_SanctionTab= explicityWait(wait, "//android.view.View[@content-desc=\"Name of Organization\"]/android.view.View/android.widget.EditText");
+		Name_Of_Orgination_SanctionTab.click();
+		Name_Of_Orgination_SanctionTab.clear();
+		Name_Of_Orgination_SanctionTab.sendKeys("Mahindra Finance");
+		driver.hideKeyboard();
 		
 		WebElement Years_in_current_profession_SanctionTab= explicityWait(wait, "//android.view.View[@content-desc=\"Years in current profession\"]/android.view.View/android.widget.EditText");
 		Years_in_current_profession_SanctionTab.click();
 		Years_in_current_profession_SanctionTab.clear();
 		Years_in_current_profession_SanctionTab.sendKeys("5");
 		driver.hideKeyboard();
-						
+		
+		Co_Ordinate_Scroll(driver, 460, 760, 460, 1757);//scrollup
+		Co_Ordinate_Scroll(driver, 460, 760, 460, 1757);//scrollup
+		
+		Basic_Customer_Profile_SanctionTab.click();
 		
 		
-
-		//***************************Payout Details****************************************			
-						
-		
-		
-		WebElement PayOut_Details_SanctionTab= explicityWait(wait, "(//android.view.View[@content-desc=\"Payout Details\"])[1]");
-		PayOut_Details_SanctionTab.click();
-		
-		
-		
-				
 	
 		
-		
-		
-		
-		
-		
-		
-		
+//		WebElement ProceedBtn_SanctionTab= explicityWait(wait, "//android.widget.Button[@content-desc=\"Proceed\"]");
+//		ProceedBtn_SanctionTab.click();  
+
 		
 		
 	
@@ -827,6 +1240,24 @@ public class demo {
 	        .moveTo(PointOption.point(startX, endY))
 	        .release()
 	        .perform();
+	}
+	
+	
+	public static void Co_Ordinate_Scroll(AndroidDriver<WebElement> driver, int startX1, int startY1, int endX1, int endY1) {
+		TouchAction touchAction = new TouchAction(driver);
+
+		// Define the start and end points for the swipe
+		int startX = startX1; // X coordinate for the start point
+		int startY = startY1; // Y coordinate for the start point
+		int endX = endX1;   // X coordinate for the end point
+		int endY = endY1;   // Y coordinate for the end point
+
+		// Perform the swipe action
+		touchAction.press(PointOption.point(startX, startY))
+		            .waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+		            .moveTo(PointOption.point(endX, endY))
+		            .release()
+		            .perform();
 	}
 
 

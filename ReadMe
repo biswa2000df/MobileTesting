@@ -26,3 +26,6 @@ adb kill-server
 adb tcpip 5555 
 after that to remove the cable and run the down command
 adb connect 192.168.4.103:5555== that is the ip of the mobile
+
+*When this error thrown = Exception in thread "main" org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details. Original error: The requested resource could not be found, or a request was received using an HTTP method that is not supported by the mapped resource (WARNING: The server did not provide any stacktrace information)
+then clear phone storage or logs or temporary file
