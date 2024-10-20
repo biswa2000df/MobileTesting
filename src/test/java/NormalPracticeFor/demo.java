@@ -50,6 +50,8 @@ public class demo {
 		Thread.sleep(4000);
 		
 		/*
+		 
+		 //here we open new application and login user using sapcode and  password and msg
 		
 		driver.findElement(By.xpath("//android.widget.Button[@text=\"WHILE USING THE APP\"]")).click();//click on while using the app button
 		Thread.sleep(2000);
@@ -925,40 +927,40 @@ public class demo {
 		Co_Ordinate_Scroll(driver, 400, 1700, 423, 1017);//scrolldown
 //		ScrollDown(driver);
 		
-		WebElement MaritalStatus_SanctionTab= explicityWait(wait, "//android.view.View[@content-desc=\"Marital Status\"]/android.view.View/android.view.View");
-		MaritalStatus_SanctionTab.click();
+		WebElement MaritalStatus_CustomerProfile_Co_Applicant= explicityWait(wait, "//android.view.View[@content-desc=\"Marital Status\"]/android.view.View/android.view.View");
+		MaritalStatus_CustomerProfile_Co_Applicant.click();
 		
-		SelectOneElementInsideListOfElement(driver, "//*[@class=\"android.widget.ScrollView\"]/android.view.View", "Unmarried", "MaritalStatus_SanctionTab");
+		SelectOneElementInsideListOfElement(driver, "//*[@class=\"android.widget.ScrollView\"]/android.view.View", "Unmarried", "MaritalStatus_CustomerProfile_Co_Applicant");
 
 		
-		WebElement No_of_Dependents_SanctionTab= explicityWait(wait, "//android.view.View[@content-desc=\"No. of Dependents\"]/android.view.View/android.view.View");
-		No_of_Dependents_SanctionTab.click();
+		WebElement No_of_Dependents_CustomerProfile_Co_Applicant= explicityWait(wait, "//android.view.View[@content-desc=\"No. of Dependents\"]/android.view.View/android.view.View");
+		No_of_Dependents_CustomerProfile_Co_Applicant.click();
 		
-		SelectOneElementInsideListOfElement(driver, "//*[@class=\"android.widget.ScrollView\"]/android.view.View", "2", "No_of_Dependents_SanctionTab");
+		SelectOneElementInsideListOfElement(driver, "//*[@class=\"android.widget.ScrollView\"]/android.view.View", "2", "No_of_Dependents_CustomerProfile_Co_Applicant");
 		
 		ScrollDown_LittleBit(driver);
 		Thread.sleep(2000);
 		
-		WebElement No_of_Earning_Members_SanctionTab= explicityWait(wait, "//android.view.View[@content-desc=\"No. of Earning Members\"]/android.view.View//android.view.View");
-		No_of_Earning_Members_SanctionTab.click();
+		WebElement No_of_Earning_Members_CustomerProfile_Co_Applicant= explicityWait(wait, "//android.view.View[@content-desc=\"No. of Earning Members\"]/android.view.View//android.view.View");
+		No_of_Earning_Members_CustomerProfile_Co_Applicant.click();
 			
-		SelectOneElementInsideListOfElement(driver, "//*[@class=\"android.widget.ScrollView\"]/android.view.View", "3", "No_of_Earning_Members_SanctionTab");
+		SelectOneElementInsideListOfElement(driver, "//*[@class=\"android.widget.ScrollView\"]/android.view.View", "3", "No_of_Earning_Members_CustomerProfile_Co_Applicant");
 		
 		ScrollDown_LittleBit(driver);
 		Thread.sleep(2000);
 		
-		WebElement Vehicles_Owned_SanctionTab= explicityWait(wait, "//android.view.View[@content-desc=\"Vehicles Owned\"]/android.view.View/android.view.View");
-		Vehicles_Owned_SanctionTab.click();
+		WebElement Vehicles_Owned_CustomerProfile_Co_Applicant= explicityWait(wait, "//android.view.View[@content-desc=\"Vehicles Owned\"]/android.view.View/android.view.View");
+		Vehicles_Owned_CustomerProfile_Co_Applicant.click();
 		
-		SelectOneElementInsideListOfElement(driver, "//*[@class=\"android.widget.ScrollView\"]/android.view.View", "1", "Vehicles_Owned_SanctionTab");
+		SelectOneElementInsideListOfElement(driver, "//*[@class=\"android.widget.ScrollView\"]/android.view.View", "1", "Vehicles_Owned_CustomerProfile_Co_Applicant");
 		
 		ScrollDown_LittleBit(driver);
 		Thread.sleep(1000);
 		
-		WebElement Education_qualification_SanctionTab= explicityWait(wait, "//android.view.View[@content-desc=\"Education Qualification\"]/android.view.View/android.view.View");
-		Education_qualification_SanctionTab.click();
+		WebElement Education_qualification_CustomerProfile_Co_Applicant= explicityWait(wait, "//android.view.View[@content-desc=\"Education Qualification\"]/android.view.View/android.view.View");
+		Education_qualification_CustomerProfile_Co_Applicant.click();
 		
-		SelectOneElementInsideListOfElement(driver, "//*[@class=\"android.widget.ScrollView\"]/android.view.View", "Post Graduate", "Education_qualification_SanctionTab");
+		SelectOneElementInsideListOfElement(driver, "//*[@class=\"android.widget.ScrollView\"]/android.view.View", "Post Graduate", "Education_qualification_CustomerProfile_Co_Applicant");
 
 		Thread.sleep(1000);
 		ScrollDown(driver);
@@ -984,34 +986,34 @@ public class demo {
 		
 		ScrollDown_LittleBit(driver);
 		
-		WebElement Address_Line1_SanctionTab= explicityWait(wait, "//android.view.View[@content-desc=\"Address Line 1\"]/android.view.View/android.widget.EditText");
-		Address_Line1_SanctionTab.click();
-		Address_Line1_SanctionTab.clear();
-		Address_Line1_SanctionTab.sendKeys("Odisha");
+		WebElement Address_Line1_CustomerProfile_Co_Applicant= explicityWait(wait, "//android.view.View[@content-desc=\"Address Line 1\"]/android.view.View/android.widget.EditText");
+		Address_Line1_CustomerProfile_Co_Applicant.click();
+		Address_Line1_CustomerProfile_Co_Applicant.clear();
+		Address_Line1_CustomerProfile_Co_Applicant.sendKeys("Odisha");
 		driver.navigate().back();
 		
 		ScrollDown_LittleBit(driver);
 		Thread.sleep(2000);
 		
-		WebElement Address_Line2_SanctionTab= explicityWait(wait, "//android.view.View[@content-desc=\"Address Line 2\"]/android.view.View/android.widget.EditText");
-		Address_Line2_SanctionTab.click();
-		Address_Line2_SanctionTab.clear();
-		Address_Line2_SanctionTab.sendKeys("Odisha");
+		WebElement Address_Line2_CustomerProfile_Co_Applicant= explicityWait(wait, "//android.view.View[@content-desc=\"Address Line 2\"]/android.view.View/android.widget.EditText");
+		Address_Line2_CustomerProfile_Co_Applicant.click();
+		Address_Line2_CustomerProfile_Co_Applicant.clear();
+		Address_Line2_CustomerProfile_Co_Applicant.sendKeys("Odisha");
 		driver.navigate().back();
 		
 		ScrollDown_LittleBit(driver);
 		Thread.sleep(1000);
 		
-		WebElement Enter_PinCode_SanctionTab= explicityWait(wait, "//android.view.View[@content-desc=\"Pincode\"]/android.widget.EditText");
-		Enter_PinCode_SanctionTab.click();
-		Enter_PinCode_SanctionTab.clear();
-		Enter_PinCode_SanctionTab.sendKeys("754204");
+		WebElement Enter_PinCode_CustomerProfile_Co_Applicant= explicityWait(wait, "//android.view.View[@content-desc=\"Pincode\"]/android.widget.EditText");
+		Enter_PinCode_CustomerProfile_Co_Applicant.click();
+		Enter_PinCode_CustomerProfile_Co_Applicant.clear();
+		Enter_PinCode_CustomerProfile_Co_Applicant.sendKeys("754204");
 		
-		WebElement Select_PinCode_SanctionTab= explicityWait(wait, "//android.view.View[@content-desc=\"754204\"]");
-		Select_PinCode_SanctionTab.click();
+		WebElement Select_PinCode_CustomerProfile_Co_Applicant= explicityWait(wait, "//android.view.View[@content-desc=\"754204\"]");
+		Select_PinCode_CustomerProfile_Co_Applicant.click();
 		
-		WebElement Select_Taluk_SanctionTab= explicityWait(wait, "//android.view.View[@content-desc=\"Taluk\"]/android.view.View/android.view.View");
-		Select_Taluk_SanctionTab.click();
+		WebElement Select_Taluk_CustomerProfile_Co_Applicant= explicityWait(wait, "//android.view.View[@content-desc=\"Taluk\"]/android.view.View/android.view.View");
+		Select_Taluk_CustomerProfile_Co_Applicant.click();
 		
 		SelectOneElementInsideListOfElement(driver, "//*[@class=\"android.view.View\"] ", "Mahanga", "Taluk");
 		Thread.sleep(1000);
@@ -1028,56 +1030,54 @@ public class demo {
 		
 		//*********************************************Basic Customer Profile for Co-Applicant******************************************************************
 		
-		WebElement Basic_Customer_Profile_SanctionTab= explicityWait(wait, "(//android.view.View[@content-desc=\"Basic Customer Profile\"])[1]");
-		Basic_Customer_Profile_SanctionTab.click();
+		WebElement Basic_Customer_Profile_CustomerProfile_Co_Applicant= explicityWait(wait, "(//android.view.View[@content-desc=\"Basic Customer Profile\"])[1]");
+		Basic_Customer_Profile_CustomerProfile_Co_Applicant.click();
 		
 //		ScrollDown(driver);
 		Thread.sleep(2000);
 		Co_Ordinate_Scroll(driver, 460, 1757, 460, 900);//scrolldown
 		
-		WebElement Total_Employment_SanctionTab= explicityWait(wait, "//android.view.View[@content-desc=\"Total Employment\"]/android.view.View/android.widget.EditText");
-		Total_Employment_SanctionTab.click();
-		Total_Employment_SanctionTab.clear();
-		Total_Employment_SanctionTab.sendKeys("5");
+		WebElement Total_Employment_CustomerProfile_Co_Applicant= explicityWait(wait, "//android.view.View[@content-desc=\"Total Employment\"]/android.view.View/android.widget.EditText");
+		Total_Employment_CustomerProfile_Co_Applicant.click();
+		Total_Employment_CustomerProfile_Co_Applicant.clear();
+		Total_Employment_CustomerProfile_Co_Applicant.sendKeys("5");
 		driver.hideKeyboard();
 		
 		ScrollDown_LittleBit(driver);
 		
-		WebElement Annual_Gross_Income_SanctionTab= explicityWait(wait, "(//android.view.View[@content-desc=\"Declared Annual Gross Income\"])[2]/android.view.View/android.widget.EditText");
-		Annual_Gross_Income_SanctionTab.click();
-		Annual_Gross_Income_SanctionTab.clear();
-		Annual_Gross_Income_SanctionTab.sendKeys("500000");
+		WebElement Annual_Gross_Income_CustomerProfile_Co_Applicant= explicityWait(wait, "(//android.view.View[@content-desc=\"Declared Annual Gross Income\"])[2]/android.view.View/android.widget.EditText");
+		Annual_Gross_Income_CustomerProfile_Co_Applicant.click();
+		Annual_Gross_Income_CustomerProfile_Co_Applicant.clear();
+		Annual_Gross_Income_CustomerProfile_Co_Applicant.sendKeys("500000");
 		driver.hideKeyboard();
 		
 		ScrollDown_LittleBit(driver);
 		
-		WebElement Annual_Gross_Obligations_SanctionTab= explicityWait(wait, "(//android.view.View[@content-desc=\"Declared Annual Gross Obligations\"])[2]/android.view.View/android.widget.EditText");
-		Annual_Gross_Obligations_SanctionTab.click();
-		Annual_Gross_Obligations_SanctionTab.clear();
-		Annual_Gross_Obligations_SanctionTab.sendKeys("500000");
+		WebElement Annual_Gross_Obligations_CustomerProfile_Co_Applicant= explicityWait(wait, "(//android.view.View[@content-desc=\"Declared Annual Gross Obligations\"])[2]/android.view.View/android.widget.EditText");
+		Annual_Gross_Obligations_CustomerProfile_Co_Applicant.click();
+		Annual_Gross_Obligations_CustomerProfile_Co_Applicant.clear();
+		Annual_Gross_Obligations_CustomerProfile_Co_Applicant.sendKeys("500000");
 		driver.hideKeyboard();
 		
 		ScrollDown_LittleBit(driver);
 		
-		WebElement Name_Of_Orgination_SanctionTab= explicityWait(wait, "//android.view.View[@content-desc=\"Name of Organization\"]/android.view.View/android.widget.EditText");
-		Name_Of_Orgination_SanctionTab.click();
-		Name_Of_Orgination_SanctionTab.clear();
-		Name_Of_Orgination_SanctionTab.sendKeys("Mahindra Finance");
+		WebElement Name_Of_Orgination_CustomerProfile_Co_Applicant= explicityWait(wait, "//android.view.View[@content-desc=\"Name of Organization\"]/android.view.View/android.widget.EditText");
+		Name_Of_Orgination_CustomerProfile_Co_Applicant.click();
+		Name_Of_Orgination_CustomerProfile_Co_Applicant.clear();
+		Name_Of_Orgination_CustomerProfile_Co_Applicant.sendKeys("Mahindra Finance");
 		driver.hideKeyboard();
 		
-		WebElement Years_in_current_profession_SanctionTab= explicityWait(wait, "//android.view.View[@content-desc=\"Years in current profession\"]/android.view.View/android.widget.EditText");
-		Years_in_current_profession_SanctionTab.click();
-		Years_in_current_profession_SanctionTab.clear();
-		Years_in_current_profession_SanctionTab.sendKeys("5");
+		WebElement Years_in_current_profession_CustomerProfile_Co_Applicant= explicityWait(wait, "//android.view.View[@content-desc=\"Years in current profession\"]/android.view.View/android.widget.EditText");
+		Years_in_current_profession_CustomerProfile_Co_Applicant.click();
+		Years_in_current_profession_CustomerProfile_Co_Applicant.clear();
+		Years_in_current_profession_CustomerProfile_Co_Applicant.sendKeys("5");
 		driver.hideKeyboard();
 		
 		Co_Ordinate_Scroll(driver, 460, 760, 460, 1757);//scrollup
 		Co_Ordinate_Scroll(driver, 460, 760, 460, 1757);//scrollup
 		
-		Basic_Customer_Profile_SanctionTab.click();
+		Basic_Customer_Profile_CustomerProfile_Co_Applicant.click();
 		
-		
-	
 		
 //		WebElement ProceedBtn_SanctionTab= explicityWait(wait, "//android.widget.Button[@content-desc=\"Proceed\"]");
 //		ProceedBtn_SanctionTab.click();  
